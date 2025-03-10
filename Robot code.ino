@@ -49,7 +49,7 @@ public:
       digitalWrite(dirPin, reversed);
     }
     targetSteps = TargetSteps;
-    speeds[0] = speed; // set the activation duration
+    speeds[0] = speed; // set the inactive duration
     bussy = true;
     activated = 0;
   }
