@@ -131,13 +131,13 @@ struct Movement
 {
 private:
   int step = 0;
-  int n = sizeof(moves) / sizeof(moves[0]);
+  int totalSteps = sizeof(moves) / sizeof(moves[0]);
 
 public:
   // start the movement to the next position
   void NextStep()
   {
-    if (step == n)
+    if (step == totalSteps)
       step = 0;
     delay(1000);
     motors[1].StartMovement(moves[step][0], moves[step][1]);
